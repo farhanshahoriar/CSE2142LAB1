@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <cstdio>
+#include <vector>
+#include <algorithm>
 using namespace std;
 //making a class to keep data of the task
 class task{
