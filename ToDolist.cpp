@@ -28,8 +28,7 @@ class task{
     }
 };
 vector<task> tasklist;
-void choose_task()
-{
+void choose_task(){
     int taskno;
     string chk;
     if(tasklist.size()==0){
@@ -60,8 +59,7 @@ void choose_task()
     }while(chk!="m");
     system("clear");//Clear display
 }
-void addnewtask()
-{
+void addnewtask(){
     string inputname,inputinfo;
     int day,month,year;
     //we will input task details here.
@@ -73,12 +71,13 @@ void addnewtask()
     cout<<"Enter task date (Format:DD/MM/YYYY): ";
     scanf("%d%*c%d%*c%d",&day,&month,&year);
     //Need to check if input format,added by user is correct. will be done in next update
-    if(year<100)year+=2000;//for year 2018 user can input 2018 or only 18. it will be converted here.
+    if(year<100){
+        year+=2000;//for year 2018 user can input 2018 or only 18. it will be converted here.
+    }
     tasklist.push_back(task(inputname,inputinfo,day,month,year));
     system("clear");//Clear display
 }
-int main()
-{
+int main(){
     int i,j,a,b,ts,f=1,cn=0,n;
     int option;
     while(true){
